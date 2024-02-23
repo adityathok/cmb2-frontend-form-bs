@@ -32,8 +32,7 @@ function cmb2_do_frontend_form_shortcode( $atts = array() ) {
     $cmb = cmb2_get_metabox( $metabox_id, $object_id );
 
     if(empty($cmb))
-        return 'Metabox ID not found';
-    return false;
+    return 'Metabox ID not found';
     
     // Get $cmb object_types
     $post_types = $cmb->prop( 'object_types' );
