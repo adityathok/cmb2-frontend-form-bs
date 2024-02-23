@@ -168,6 +168,10 @@ class CMB2_Frontend_Form_Bs {
      * @param object $wp_query_obj The WordPress query object.
      */
     function restrict_media_library($wp_query_obj){
+        if ( is_admin() ) {
+            return;
+        }
+        
         global $current_user, $pagenow;
 
         if ( ! is_a( $current_user, 'WP_User' ) ) {
