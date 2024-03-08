@@ -49,7 +49,7 @@ class CMB2_Frontend_Form_Bs {
 
         // Parse attributes. These shortcode attributes can be optionally overridden.
         $atts = shortcode_atts( array(
-            'ID'            => isset($atts['post_id'])?absint( $atts['post_id'] ):0,
+            'ID'            => $object_id!=='new-object-id'?$object_id:0,
             'post_author'   => $user_id ? $user_id : 1,
             'post_status'   => 'publish',
             'post_type'     => reset( $post_types ),
